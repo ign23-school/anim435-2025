@@ -1,21 +1,20 @@
- # Colored Ball Maker
+ # Named Box Maker
 
  ## Overview
 
-This tool allows you to create individual polySpheres of three different potential lambert material colors; red, green, and blue. It outputs a Maya scene called "coloredsphere.mb"
+This tool allows you to create individual polyCubes and assigns them a name based on the environmental variable "ASSET", which is decided by the user
  ## Usage
 
-**Step 1** - In Git Bash, convert your directory to the "bin" folder inside the zip
+**Step 1** - In Git Bash, set the environmental variable with the following command: export ASSET=YourDesiredName (Ex: Steve, Bob, etc.)
 
-**Step 2** - Run the command "mayapy assignment3.py" (or command "mayapy assignment3.py --help" to see argument descriptions)
+**Step 2** - Enter the "maya" command in Git bash to open Maya
 
-**Step 3** - Input your selected color when prompted
+**Step 3** - Open the "assignment4.py" file in the Maya Script Editor
 
-**Step 4** - Sphere of your desired color will be created in a Maya file called "coloredsphere.mb" in the "bin" folder
+**Step 4** - Run the script by hitting the "ExecuteAll" button
 
  ```python
-assignment3
+assignment4
 
---help               # Shows arguments and description of their purpose
---color <color>      # Input color from options red, green, and blue
+ASSET               # Environmental Variable containing the polyCube's chosen name
  ```
