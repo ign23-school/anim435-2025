@@ -2,10 +2,10 @@
 
  ## Overview
 
-This tool allows you to create individual polyCubes and assigns them a name based on the environmental variable "ASSET", which is decided by the user
+This tool allows you to create individual polyCubes and assigns them a name based on the environmental variable "ASSET", which has a value decided by the user.
  ## Usage
 
-**Step 1** - In Git Bash, set the environmental variable with the following command: export ASSET=YourDesiredName (Ex: Steve, Bob, etc.)
+**Step 1** - In Git Bash, set the environmental variable with the following command: export ASSET=YourDesiredName (Ex: Steve, MyBox, Box1, etc.)
 
 **Step 2** - Enter the "maya" command in Git bash to open Maya
 
