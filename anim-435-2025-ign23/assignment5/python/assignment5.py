@@ -1,6 +1,6 @@
 import os
 import logging
-import maya.cmds as cmds
+import maya.cmds
 
 user = os.getenv("USERNAME")
 
