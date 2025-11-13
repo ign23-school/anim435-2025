@@ -2,7 +2,9 @@
 
  ## Overview
 
-This tool allows you to export an fbx and save it within a structured filepath under your computer username based on the environmental variables "PROJ", "TASK", and "ASSET", which are all values decided by the user. It also includes logging and error messages to inform the user of any mistakes or issues when executing, which are output as a text file also under your username.
+This tool allows you to export an fbx and save it within a structured filepath under your computer username based on the environmental variables "PROJ", "TASK", and "ASSET", which are all values decided by the user. 
+
+It also includes logging and error messages to inform the user of any mistakes or issues when executing, which are output as a text file titled "assignment5_log.txt" also under your username.
  ## Usage
 
 **Step 1** - In Git Bash, set each environmental variable with the following commands: 
@@ -21,7 +23,7 @@ This tool allows you to export an fbx and save it within a structured filepath u
 
 **Step 5** - Run the script by hitting the "ExecuteAll" button
 
-**Step 6** - Check the "log.txt" file to make sure that everything has executed properly
+**Step 6** - Check the "assignment5_log.txt" file to make sure that everything has executed properly
 
  ```python
 assignment5
