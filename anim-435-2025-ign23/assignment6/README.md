@@ -25,7 +25,7 @@ It also includes logging and error messages to inform the user of any mistakes o
 
 **Step 6** - Check the "assignment6_log.txt" file to make sure that everything has executed properly, it can be found under your Username folder
 
-**Step 7** - Check the "(NameOfYourAsset)_metadata.json" file to find info about the export time, Maya filepath, and enivronmental variables used in export
+**Step 7** - Check the "(NameOfYourAsset)_metadata.json" file to find info about the export time, Maya filepath, and enivronmental variables used in export, it can be found in the same folder as your exported asset
 
  ```python
 assignment6
