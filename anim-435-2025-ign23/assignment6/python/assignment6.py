@@ -6,7 +6,7 @@ import datetime
 
 user = os.getenv("USERNAME")
 
-log_file = f"C:/Users/{user}/assignment5_log.txt"
+log_file = f"C:/Users/{user}/assignment6_log.txt"
 logger = logging.getLogger("FBXExportLogger")
 logger.setLevel(logging.INFO)
 
@@ -60,7 +60,6 @@ else:
     f.close()
 
     logger.info(f"Metadata saved to: {metadata_path}")
-    # ------------------------------------------------------
 
     if not maya.cmds.pluginInfo("fbxmaya", query=True, loaded=True):
         logger.error("FBX plugin is not loaded! Please load 'fbxmaya' before exporting.")

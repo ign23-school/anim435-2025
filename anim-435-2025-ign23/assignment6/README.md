@@ -4,7 +4,7 @@
 
 This tool allows you to export an fbx and save it within a structured filepath under your computer username based on the environmental variables "PROJ", "TASK", and "ASSET", which are all values decided by the user. 
 
-It also includes logging and error messages to inform the user of any mistakes or issues when executing, which are output as a text file titled "assignment5_log.txt" also under your username.
+It also includes logging and error messages to inform the user of any mistakes or issues when executing, as well as metadata to inform the user of valuable info such as the export time and the name/filepath of the maya scene the asset was exported from. The logging and the metadata are output as text files titled "assignment6_log.txt" and "(NameOfYourAsset)_metadata.json" respectively.
  ## Usage
 
 **Step 1** - In Git Bash, set each environmental variable with the following commands: 
@@ -19,11 +19,13 @@ It also includes logging and error messages to inform the user of any mistakes o
 
 **Step 3** - Create your asset or load it into the current maya scene
 
-**Step 4** - When you are ready to save your asset, open the "assignment5.py" file in the Maya Script Editor
+**Step 4** - When you are ready to save your asset, open the "assignment6.py" file in the Maya Script Editor
 
 **Step 5** - Run the script by hitting the "ExecuteAll" button
 
-**Step 6** - Check the "assignment5_log.txt" file to make sure that everything has executed properly
+**Step 6** - Check the "assignment6_log.txt" file to make sure that everything has executed properly, it can be found under your Username folder
+
+**Step 7** - Check the "(NameOfYourAsset)_metadata.json" file to find info about the export time, Maya filepath, and enivronmental variables used in export
 
  ```python
 assignment6
