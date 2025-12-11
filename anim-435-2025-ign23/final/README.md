@@ -16,16 +16,7 @@ CAM_<slate>
 
 ### Script 2 - Camera Export (`final_export_cam_fbx.py`)
 
-1. Uses the same **SHOT** and CSV file to find the matching slate
-2. Looks for the camera created by the first script
-3. Exports that camera as an **FBX** using the naming convention:
-```bash
-CAM_<shot>.fbx
-```
-4. Saves the FBX into a folder named:
-```bash
-C:/Users/<username>/FinalExportedCam/
-```
+
 
 ## Required Environment Variables
 
@@ -47,3 +38,4 @@ For example:
 ### 3. 
 ### 4. 
 ### 5. 
+
