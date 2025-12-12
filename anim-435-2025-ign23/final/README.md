@@ -43,7 +43,7 @@ For example:
 
 ## How to Run
 ### 1. Prepare CSV file
-It must be comma separated
+It must be comma separated, example below
 ```bash
 shot,start_frame,end_frame,slate
 shot0010,1001,1030,sc010_tk004_11032024
