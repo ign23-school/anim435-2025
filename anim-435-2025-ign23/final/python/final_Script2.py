@@ -15,7 +15,7 @@ for row in reader:
 
 f.close()
 
-camera_name = "CAM_" + slate     # Gets camera name from slate in the CSV
+camera_name = "CAM_" + slate + "_Shape1"     # Gets camera name from slate in the CSV
 
 user = os.getenv("USERNAME")
 export_folder = f"C:/Users/{user}/FinalExportedCam"       # Builds folder to place the exported camera in

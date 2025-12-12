@@ -50,17 +50,21 @@ shot0010,1001,1030,sc010_tk004_11032024
 shot0020,1001,1054,sc010_tk005_11032024
 shot0030,1001,1025,sc011_tk002_11042024
 ```
-### 2. Place the scripts where Maya can find them
+### 2. Prepare Environmental Variables in Gitbash, then open Maya from same Gitbash shell
 ```bash
-Documents/maya/scripts/
+export SHOT=shot0020
+export CSV_FILE="{Filepath for your CSV}"
+maya
 ```
-### 3. Run script 1 in Maya's script editor
+### 3. Open script 1 in Maya's script editor and run it
+
+Check the console for confirmation print statements to check for errors and make sure code was executed properly!
+
+### 4. Open script 2 in Maya's script editor and run it
+
+Check the console for confirmation print statements to check for errors and make sure code was executed properly!
+
+### 5. Check for the exported camera fbx in the following folder
 ```bash
-import final_Script1
-final_Script1.main()
-```
-### 4. Run script 2 in Maya's script editor
-```bash
-import final_Script2
-final_Script2.main()
+C:/Users/<username>/FinalExportedCam/
 ```
