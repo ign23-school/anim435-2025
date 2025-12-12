@@ -1,29 +1,34 @@
 import os
 import csv
-import maya.cmds 
+import maya.cmds as cmds
 
-shot = os.getenv("SHOT")         # Gets environmental variables from current Gitbash shell
-csv_path = os.getenv("CSV_FILE")
+def main():
 
-slate = ""                       # Gets slate name by reading it from the CSV
-f = open(csv_path, "r")
-reader = csv.DictReader(f)
+    shot = os.getenv("SHOT")         # Gets environmental variables from current Gitbash shell
+    csv_path = os.getenv("CSV_FILE")
 
-for row in reader:
-    if row["shot"] == shot:
-        slate = row["slate"]
+    slate = ""                       # Gets slate name by reading it from the CSV
+    f = open(csv_path, "r")
+    reader = csv.DictReader(f)
 
-f.close()
+    for row in reader:
+        if row["shot"] == shot:
+            slate = row["slate"]
 
-camera_name = "CAM_" + slate + "_Shape1"     # Gets camera name from slate in the CSV
+    f.close()
 
-user = os.getenv("USERNAME")
-export_folder = f"C:/Users/{user}/FinalExportedCam"       # Builds folder to place the exported camera in
-os.makedirs(export_folder)
+    camera_name = "CAM_" + slate + "_cam"   # Gets camera name from slate in the CSV
 
-output_path = export_folder + "/CAM_" + shot + ".fbx"     # Builds the filename for exported camera
+    user = os.getenv("USERNAME")
+    export_folder = f"C:/Users/{user}/FinalExportedCam"       # Builds folder to place the exported camera in
+    os.makedirs(export_folder)
 
-cmds.select(camera_name)
-cmds.file(output_path, type="FBX export", exportSelected=True)    # Selects camera and exports as an fbx with the specified name to the specified path
+    output_path = export_folder + "/CAM_" + shot + ".fbx"     # Builds the filename for exported camera
 
-print("Exported FBX to:", output_path)  # Prints to confirm export 
+    cmds.select(camera_name)
+    cmds.file(output_path, type="FBX export", exportSelected=True)    # Selects camera and exports as an fbx with the specified name to the specified path
+
+    print("Exported FBX to:", output_path)  # Prints to confirm export 
+
+if __name__ == "__main__":
+    main()
