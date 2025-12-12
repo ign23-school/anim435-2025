@@ -43,15 +43,34 @@ def main():
 
     print("Timeline set to:", start_frame, "-", end_frame)
 
-    # Camera name
-    cam_name = f"CAM_{slate_name}"
+    # ALL OF BELOW IS THE RESULT OF MAYA BEING INCREDIBLY DIFFICULT AND NEVER NAMING THINGS CORRECTLY
 
-    # Check if camera already exists
-    if cmds.objExists(cam_name):
-        print("Camera already exists:", cam_name)
-    else:
-        cam, camShape = cmds.camera(name=cam_name)
-        print("Camera created:", cam_name)
+    cam_name = f"CAM_{slate_name}_cam"
+    shape_name = f"{cam_name}Shape"
+
+    # Delete transform + shape nodes if ANY exist
+    to_delete = cmds.ls(f"{cam_name}*", long=True)
+    to_delete += cmds.ls(f"{shape_name}*", long=True)
+    to_delete = list(set(to_delete))
+
+    if to_delete:
+        print("Deleting nodes:", to_delete)
+        cmds.delete(to_delete)
+
+    # Create camera with temporary name
+    temp_cam, temp_shape = cmds.camera()
+
+    # Rename the transform FIRST
+    final_cam = cmds.rename(temp_cam, cam_name)
+
+    # Now safely find its shape
+    shape = cmds.listRelatives(final_cam, shapes=True, fullPath=True)[0]
+
+    # Rename the shape
+    final_shape = cmds.rename(shape, shape_name)
+
+    print("Camera created:", final_cam)
+    print("Camera shape:", final_shape)
 
     print("Setup complete for", shot_name)
 
