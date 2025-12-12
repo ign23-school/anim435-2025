@@ -3,8 +3,7 @@ import csv
 import maya.cmds 
 
 shot = os.getenv("SHOT")
-
-csv_path =   # Wherever cvs gets saved to!
+csv_path = os.getenv("CSV_FILE")
 
 slate = ""
 f = open(csv_path, "r")
@@ -23,6 +22,7 @@ export_folder = f"C:/Users/{user}/FinalExportedCam"
 os.makedirs(export_folder)
 
 output_path = export_folder + "/" + "CAM_" + shot + ".fbx"
+
 
 cmds.select(camera_name)
 cmds.file(output_path, type="FBX export", exportSelected=True)
