@@ -14,18 +14,11 @@ for row in reader:
 f.close()
 
 camera_name = "CAM_" + slate
-cam, cam_shape = cmds.camera()
-cmds.rename(cam, camera_name)
+
+if not cmds.objExists(camera_name):
+    print("ERROR: Camera does not exist:", camera_name)
+    return
 
 user = os.getenv("USERNAME")
 export_folder = f"C:/Users/{user}/FinalExportedCam"
-os.makedirs(export_folder)
-
-output_path = export_folder + "/" + "CAM_" + shot + ".fbx"
-
-
-cmds.select(camera_name)
-cmds.file(output_path, type="FBX export", exportSelected=True)
-
-print("Created camera:", camera_name)
-print("Exported FBX to:", output_path)
+os.makedirs(export_folder, exist_ok=
